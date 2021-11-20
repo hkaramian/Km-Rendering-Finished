@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>Notification</class>
+ <widget class="QWidget" name="Notification">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -42,8 +42,8 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>20</y>
+     <x>150</x>
+     <y>30</y>
      <width>131</width>
      <height>16</height>
     </rect>
@@ -71,8 +71,8 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>90</x>
-     <y>50</y>
+     <x>100</x>
+     <y>60</y>
      <width>211</width>
      <height>21</height>
     </rect>
@@ -87,8 +87,8 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>190</y>
+     <x>120</x>
+     <y>200</y>
      <width>111</width>
      <height>16</height>
     </rect>
@@ -100,14 +100,66 @@
   <widget class="QLabel" name="label_4">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>190</y>
+     <x>240</x>
+     <y>200</y>
      <width>91</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
     <string>0,0,15</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>100</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Copy Address To CipBoard</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Km_Rendering_Finished/icons/icon_copy.png</normaloff>../Km_Rendering_Finished/icons/icon_copy.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>150</y>
+     <width>32</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Copy Address To CipBoard</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../Km_Rendering_Finished/icons/icon_copy.png</normaloff>../Km_Rendering_Finished/icons/icon_copy.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>32</width>
+     <height>32</height>
+    </size>
    </property>
   </widget>
  </widget>

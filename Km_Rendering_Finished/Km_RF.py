@@ -1,3 +1,23 @@
+#
+# Km Rendering Finished v1.0
+#
+# Developed By Hossein Karamian
+# 
+# www.kmworks.ir
+#
+#    _  __  __  __ 
+#   | |/ / |  \/  |
+#   | ' /  | \  / |
+#   |  <   | |\/| |
+#   |_|\_\ |_|  |_|
+#
+
+"""
+Change Log :
+v1.0 | First version | November 22 , 2021 
+"""
+
+
 import nuke
 import os
 import sys
@@ -30,7 +50,7 @@ class Km_Notification_Panel(QMainWindow):
         self.Write_node = WR
         
         ## REMOVE TITLE BAR
-        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         # opacity

@@ -235,11 +235,7 @@ QPushButton:pressed {
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(166, 166, 166);
-a {
-	color: rgb(166, 166, 166);
-	text-decoration: none;
-}</string>
+      <string notr="true">color: rgb(166, 166, 166);</string>
      </property>
      <property name="text">
       <string>&lt;strong&gt;By Hossein Karamian&lt;/strong&gt;</string>
@@ -519,7 +515,7 @@ background-color: rgb(239, 192, 48);
      </rect>
     </property>
     <property name="toolTip">
-     <string>Click here to Close</string>
+     <string/>
     </property>
     <property name="styleSheet">
      <string notr="true"/>

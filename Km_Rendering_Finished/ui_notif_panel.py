@@ -16,7 +16,6 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
 from PySide2.QtWidgets import *
 import os 
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
@@ -124,11 +123,7 @@ class Ui_MainWindow(object):
         font4.setWeight(50)
         font4.setStrikeOut(False)
         self.label__Hossein.setFont(font4)
-        self.label__Hossein.setStyleSheet(u"color: rgb(166, 166, 166);\n"
-"a {\n"
-"	color: rgb(166, 166, 166);\n"
-"	text-decoration: none;\n"
-"}")
+        self.label__Hossein.setStyleSheet(u"color: rgb(166, 166, 166);")
         self.label__Hossein.setTextFormat(Qt.AutoText)
         self.label__Hossein.setAlignment(Qt.AlignCenter)
         self.pushButton_close = QPushButton(self.frame)
@@ -283,7 +278,7 @@ class Ui_MainWindow(object):
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
         self.label_render_time.setText(QCoreApplication.translate("MainWindow", u"<strong>Render Time (H:M:S) :  00:14:07</strong>", None))
 #if QT_CONFIG(tooltip)
-        self.label_icon_success.setToolTip(QCoreApplication.translate("MainWindow", u"Click here to Close", None))
+        self.label_icon_success.setToolTip("")
 #endif // QT_CONFIG(tooltip)
         self.label_icon_success.setText("")
     # retranslateUi

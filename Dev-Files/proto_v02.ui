@@ -7,11 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>425</width>
-    <height>297</height>
+    <height>288</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Notification Panel</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
@@ -29,21 +35,20 @@
     <property name="styleSheet">
      <string notr="true">QFrame {
 	background-color: rgb(255, 255, 255);
-	color: rgb(250, 246, 255);
 	border-radius : 10px;
 }</string>
     </property>
     <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+     <enum>QFrame::NoFrame</enum>
     </property>
     <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+     <enum>QFrame::Plain</enum>
     </property>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="label_version">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>203</y>
+       <y>205</y>
        <width>161</width>
        <height>20</height>
       </rect>
@@ -55,16 +60,17 @@
        <weight>50</weight>
        <bold>false</bold>
        <strikeout>false</strikeout>
+       <kerning>true</kerning>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(155, 137, 200);</string>
+      <string notr="true">color: rgb(166, 166, 166);</string>
      </property>
      <property name="text">
-      <string>Km Rendering Finished v1.0</string>
+      <string>&lt;strong&gt;Km Rendering Finished v1.0&lt;/strong&gt;</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::PlainText</enum>
+      <enum>Qt::AutoText</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -74,7 +80,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>40</y>
+       <y>45</y>
        <width>381</width>
        <height>31</height>
       </rect>
@@ -99,7 +105,7 @@
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>110</y>
+       <y>115</y>
        <width>161</width>
        <height>30</height>
       </rect>
@@ -140,26 +146,26 @@ QPushButton:pressed {
        <normaloff>../Km_Rendering_Finished/icons/pack/cil-folder-open.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-folder-open.png</iconset>
      </property>
     </widget>
-    <widget class="QLabel" name="label_4">
+    <widget class="QLabel" name="label_project_name">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>70</y>
+       <y>75</y>
        <width>381</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>Segoe UI Emoji</family>
-       <pointsize>12</pointsize>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(57, 57, 57);</string>
+      <string notr="true">color: rgb(66, 66, 66);</string>
      </property>
      <property name="text">
-      <string>FS_132-080_comp_v007.nk</string>
+      <string>&lt;strong&gt;FS_132-080_comp_v007.nk&lt;/strong&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -169,7 +175,7 @@ QPushButton:pressed {
      <property name="geometry">
       <rect>
        <x>200</x>
-       <y>110</y>
+       <y>115</y>
        <width>161</width>
        <height>30</height>
       </rect>
@@ -207,14 +213,14 @@ QPushButton:pressed {
      </property>
      <property name="icon">
       <iconset>
-       <normaloff>../Km_Rendering_Finished/icons/pack/cil-folder-open.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-folder-open.png</iconset>
+       <normaloff>../Km_Rendering_Finished/icons/pack/cil-media-play.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-media-play.png</iconset>
      </property>
     </widget>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="label__Hossein">
      <property name="geometry">
       <rect>
-       <x>265</x>
-       <y>203</y>
+       <x>262</x>
+       <y>205</y>
        <width>121</width>
        <height>20</height>
       </rect>
@@ -229,38 +235,17 @@ QPushButton:pressed {
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(155, 137, 200);</string>
+      <string notr="true">color: rgb(166, 166, 166);
+a {
+	color: rgb(166, 166, 166);
+	text-decoration: none;
+}</string>
      </property>
      <property name="text">
-      <string>By Hossein Karamian</string>
+      <string>&lt;strong&gt;By Hossein Karamian&lt;/strong&gt;</string>
      </property>
      <property name="textFormat">
-      <enum>Qt::PlainText</enum>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>160</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Segoe UI</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 170, 0);</string>
-     </property>
-     <property name="text">
-      <string>&lt;strong&gt;Render Time (H:M:S) : 0:14:07&lt;/strong&gt;</string>
+      <enum>Qt::AutoText</enum>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -269,10 +254,54 @@ QPushButton:pressed {
     <widget class="QPushButton" name="pushButton_close">
      <property name="geometry">
       <rect>
-       <x>178</x>
-       <y>200</y>
+       <x>361</x>
+       <y>4</y>
        <width>20</width>
        <height>20</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>18</width>
+       <height>18</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Close</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 2px solid rgb(128, 146, 177);
+	border-radius: 10px;	
+	background-color: rgb(128, 146, 177);
+	color: rgb(223, 223, 223);
+}
+QPushButton:hover {
+	background-color: rgb(97, 110, 134);
+	border: 2px solid rgb(97, 110, 134);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Km_Rendering_Finished/icons/pack/cil-x.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-x.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_clipboard_directory">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>155</y>
+       <width>41</width>
+       <height>30</height>
       </rect>
      </property>
      <property name="minimumSize">
@@ -288,24 +317,197 @@ QPushButton:pressed {
       </font>
      </property>
      <property name="toolTip">
-      <string>Close</string>
+      <string>Copy Render Directory Address to ClipBoard</string>
      </property>
      <property name="styleSheet">
       <string notr="true">QPushButton {
-	border: 2px solid rgb(68, 77, 94);
-	border-radius: 10px;	
-	background-color: rgb(68, 77, 94);
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
 	color: rgb(223, 223, 223);
 }
 QPushButton:hover {
-	background-color: rgb(52, 59, 72);
+	background-color: rgb(57, 65, 80);
 	border: 2px solid rgb(61, 70, 86);
+}
+QPushButton:pressed {	
+	background-color: rgb(35, 40, 49);
+	border: 2px solid rgb(43, 50, 61);
 }</string>
      </property>
      <property name="text">
-      <string>X</string>
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Km_Rendering_Finished/icons/pack/cil-copy.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-copy.png</iconset>
      </property>
     </widget>
+    <widget class="QPushButton" name="pushButton_clipboard_file">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>155</y>
+       <width>41</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="toolTip">
+      <string>Copy Render File Address to ClipBoard</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 2px solid rgb(52, 59, 72);
+	border-radius: 5px;	
+	background-color: rgb(52, 59, 72);
+	color: rgb(223, 223, 223);
+}
+QPushButton:hover {
+	background-color: rgb(57, 65, 80);
+	border: 2px solid rgb(61, 70, 86);
+}
+QPushButton:pressed {	
+	background-color: rgb(35, 40, 49);
+	border: 2px solid rgb(43, 50, 61);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Km_Rendering_Finished/icons/pack/cil-copy.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-copy.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_render_icon">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>75</x>
+       <y>155</y>
+       <width>41</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+	border: 2px solid rgb(239, 192, 48);
+	border-radius: 5px;	
+	background-color: rgb(239, 192, 48);
+	color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Km_Rendering_Finished/icons/pack/cil-speedometer.png</normaloff>../Km_Rendering_Finished/icons/pack/cil-speedometer.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>30</width>
+       <height>30</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>155</y>
+       <width>51</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+	border: 2px solid rgb(239, 192, 48);
+	border-radius: 5px;	
+	background-color: rgb(239, 192, 48);
+	color: rgb(255, 255, 255);
+}</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_render_time">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>155</y>
+       <width>200</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Segoe UI</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(234, 234, 234);
+background-color: rgb(239, 192, 48);
+	border-radius: 5px;	</string>
+     </property>
+     <property name="text">
+      <string>&lt;strong&gt;Render Time (H:M:S) :  00:14:07&lt;/strong&gt;</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>label_version</zorder>
+    <zorder>label_3</zorder>
+    <zorder>pushButton_2</zorder>
+    <zorder>label_project_name</zorder>
+    <zorder>pushButton_3</zorder>
+    <zorder>label__Hossein</zorder>
+    <zorder>pushButton_close</zorder>
+    <zorder>pushButton_clipboard_directory</zorder>
+    <zorder>pushButton_clipboard_file</zorder>
+    <zorder>label_9</zorder>
+    <zorder>pushButton_render_icon</zorder>
+    <zorder>label_render_time</zorder>
    </widget>
    <widget class="QLabel" name="label_icon_success">
     <property name="geometry">
@@ -315,6 +517,9 @@ QPushButton:hover {
       <width>80</width>
       <height>80</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>Click here to Close</string>
     </property>
     <property name="styleSheet">
      <string notr="true"/>
@@ -340,8 +545,6 @@ QPushButton:hover {
    </widget>
   </widget>
  </widget>
- <resources>
-  <include location="D:/Downloads/Compressed/Simple_PySide_Base-master/files.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

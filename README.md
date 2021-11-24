@@ -11,7 +11,7 @@ This tool shows a Notification with some tools after a Nuke render finished
 ### Install
 1. Copy 'Km_Rendering_Finished' folder to nuke plugin path
 
-2. Add following line to iniy.py file in the nuke plugin path :
+2. Add following line to init.py file in the nuke plugin path :
 
 `nuke.pluginAddPath('./Km_Rendering_Finished')`
 

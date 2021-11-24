@@ -64,7 +64,9 @@
       </font>
      </property>
      <property name="styleSheet">
-      <string notr="true">color: rgb(166, 166, 166);</string>
+      <string notr="true">color: rgb(166, 166, 166);
+
+</string>
      </property>
      <property name="text">
       <string>&lt;strong&gt;Km Rendering Finished v1.0&lt;/strong&gt;</string>

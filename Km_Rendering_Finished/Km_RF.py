@@ -14,7 +14,7 @@
 
 """
 Change Log :
-v1.0 | First version | November 22 , 2021 
+v1.0 | First version | November 24 , 2021 
 """
 
 
@@ -28,7 +28,6 @@ import datetime
 
 ################################################################################
 ## ui_notif_panel.py changes needed for new version from qt designer : 
-## remove import files_rc
 ## add import os 
 ## Replace  : 
 ## u"../Km_Rendering_Finished/icons

@@ -15,7 +15,7 @@
 """
 Changes Log :
 v1.0 | First version | November 24 , 2021 
-v1.0.1 | Bug Fix , in some cases notification window disappeares just after it's popping up | November 25 , 2021 
+v1.0.1 | Bug Fix , in some cases notification window disappears just after it's popping up | November 25 , 2021 
 """
 
 

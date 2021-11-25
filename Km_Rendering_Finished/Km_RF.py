@@ -13,8 +13,9 @@
 #
 
 """
-Change Log :
+Changes Log :
 v1.0 | First version | November 24 , 2021 
+v1.0.1 | Bug Fix , in some cases notification window disappeares just after it's popping up | November 25 , 2021 
 """
 
 
@@ -171,6 +172,7 @@ class Km_Notification_Panel(QMainWindow):
 
 
 def Create_Show_Notif_Panel():
+    global notif_panel
     notif_panel = Km_Notification_Panel(nuke.thisNode())
     notif_panel.show()
 

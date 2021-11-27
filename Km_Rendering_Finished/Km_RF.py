@@ -70,7 +70,6 @@ class Km_Notification_Panel(QMainWindow):
         
         # Set Signals
         self.ui.pushButton_close.clicked.connect(self.close)
-        self.ui.label_icon_success.mousePressEvent = self.close_notif_panel
         self.ui.pushButton_2.clicked.connect(self.Open_Render_Directory)
         self.ui.pushButton_3.clicked.connect(self.Open_Render_File)
         self.ui.pushButton_clipboard_directory.clicked.connect(self.Copy_To_ClipBoard_Directory)
@@ -88,7 +87,7 @@ class Km_Notification_Panel(QMainWindow):
         # set project name lable
         self.ui.label_project_name.setText("<strong>"+os.path.basename(nuke.root().name())+"</strong>")
         
-        self.show()
+        #self.show()
 
     # def enterEvent(self, event): 
     #     self.op_effect.setOpacity(1)
@@ -96,9 +95,6 @@ class Km_Notification_Panel(QMainWindow):
     # def leaveEvent(self, event):  
     #     self.op_effect.setOpacity(self.opacity_value)
 
-    def close_notif_panel(self,aaa):
-        #self.close()
-        return
 
     def Open_Render_Directory(self):
             path =  os.path.dirname(self.Write_node.knob('file').value())

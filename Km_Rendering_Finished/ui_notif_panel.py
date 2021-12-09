@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'proto_v02AWOwOh.ui'
+## Form generated from reading UI file 'window_v2fPtqWR.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.0
 ##
@@ -14,7 +14,8 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont,
     QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter,
     QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
-import os 
+
+import os
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -39,18 +40,20 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QFrame.Plain)
         self.label_version = QLabel(self.frame)
         self.label_version.setObjectName(u"label_version")
-        self.label_version.setGeometry(QRect(0, 205, 161, 20))
+        self.label_version.setGeometry(QRect(6, 205, 191, 20))
         font1 = QFont()
-        font1.setFamily(u"Segoe UI")
-        font1.setPointSize(8)
+        font1.setFamily(u"Segoe UI Semibold")
+        font1.setPointSize(9)
         font1.setBold(False)
         font1.setWeight(50)
         font1.setStrikeOut(False)
         font1.setKerning(True)
         self.label_version.setFont(font1)
-        self.label_version.setStyleSheet(u"color: rgb(166, 166, 166);")
+        self.label_version.setStyleSheet(u"color: rgb(166, 166, 166);\n"
+"\n"
+"")
         self.label_version.setTextFormat(Qt.AutoText)
-        self.label_version.setAlignment(Qt.AlignCenter)
+        self.label_version.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.label_3 = QLabel(self.frame)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setGeometry(QRect(0, 45, 381, 31))
@@ -62,10 +65,10 @@ class Ui_MainWindow(object):
         self.label_3.setAlignment(Qt.AlignCenter)
         self.pushButton_2 = QPushButton(self.frame)
         self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setGeometry(QRect(20, 115, 161, 30))
+        self.pushButton_2.setGeometry(QRect(20, 115, 166, 30))
         self.pushButton_2.setMinimumSize(QSize(150, 30))
         font3 = QFont()
-        font3.setFamily(u"Segoe UI")
+        font3.setFamily(u"Segoe UI Semibold")
         font3.setPointSize(9)
         self.pushButton_2.setFont(font3)
         self.pushButton_2.setStyleSheet(u"QPushButton {\n"
@@ -88,12 +91,15 @@ class Ui_MainWindow(object):
         self.label_project_name = QLabel(self.frame)
         self.label_project_name.setObjectName(u"label_project_name")
         self.label_project_name.setGeometry(QRect(0, 75, 381, 31))
-        self.label_project_name.setFont(font3)
+        font4 = QFont()
+        font4.setFamily(u"Segoe UI Semibold")
+        font4.setPointSize(10)
+        self.label_project_name.setFont(font4)
         self.label_project_name.setStyleSheet(u"color: rgb(66, 66, 66);")
         self.label_project_name.setAlignment(Qt.AlignCenter)
         self.pushButton_3 = QPushButton(self.frame)
         self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setGeometry(QRect(200, 115, 161, 30))
+        self.pushButton_3.setGeometry(QRect(196, 115, 167, 30))
         self.pushButton_3.setMinimumSize(QSize(150, 30))
         self.pushButton_3.setFont(font3)
         self.pushButton_3.setStyleSheet(u"QPushButton {\n"
@@ -115,22 +121,25 @@ class Ui_MainWindow(object):
         self.pushButton_3.setIcon(icon1)
         self.label__Hossein = QLabel(self.frame)
         self.label__Hossein.setObjectName(u"label__Hossein")
-        self.label__Hossein.setGeometry(QRect(262, 205, 121, 20))
-        font4 = QFont()
-        font4.setFamily(u"Segoe UI")
-        font4.setPointSize(8)
-        font4.setBold(False)
-        font4.setWeight(50)
-        font4.setStrikeOut(False)
-        self.label__Hossein.setFont(font4)
+        self.label__Hossein.setGeometry(QRect(207, 205, 171, 20))
+        font5 = QFont()
+        font5.setFamily(u"Segoe UI Semibold")
+        font5.setPointSize(9)
+        font5.setBold(False)
+        font5.setWeight(50)
+        font5.setStrikeOut(False)
+        self.label__Hossein.setFont(font5)
         self.label__Hossein.setStyleSheet(u"color: rgb(166, 166, 166);")
         self.label__Hossein.setTextFormat(Qt.AutoText)
-        self.label__Hossein.setAlignment(Qt.AlignCenter)
+        self.label__Hossein.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.pushButton_close = QPushButton(self.frame)
         self.pushButton_close.setObjectName(u"pushButton_close")
         self.pushButton_close.setGeometry(QRect(361, 4, 20, 20))
         self.pushButton_close.setMinimumSize(QSize(18, 18))
-        self.pushButton_close.setFont(font3)
+        font6 = QFont()
+        font6.setFamily(u"Segoe UI")
+        font6.setPointSize(9)
+        self.pushButton_close.setFont(font6)
         self.pushButton_close.setStyleSheet(u"QPushButton {\n"
 "	border: 2px solid rgb(128, 146, 177);\n"
 "	border-radius: 10px;	\n"
@@ -148,96 +157,99 @@ class Ui_MainWindow(object):
         self.pushButton_clipboard_directory.setObjectName(u"pushButton_clipboard_directory")
         self.pushButton_clipboard_directory.setGeometry(QRect(20, 155, 41, 30))
         self.pushButton_clipboard_directory.setMinimumSize(QSize(20, 20))
-        self.pushButton_clipboard_directory.setFont(font3)
+        self.pushButton_clipboard_directory.setFont(font6)
         self.pushButton_clipboard_directory.setStyleSheet(u"QPushButton {\n"
-"	border: 2px solid rgb(52, 59, 72);\n"
+"	border: 2px solid  rgb(133, 201, 84);\n"
 "	border-radius: 5px;	\n"
-"	background-color: rgb(52, 59, 72);\n"
-"	color: rgb(223, 223, 223);\n"
+"	background-color:  rgb(133, 201, 84);\n"
+"	color: rgb(255, 255, 255);\n"
 "}\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(57, 65, 80);\n"
-"	border: 2px solid rgb(61, 70, 86);\n"
+"	background-color: rgb(145, 210, 90);\n"
+"	border: 2px solidrgb(145, 210, 90);\n"
 "}\n"
 "QPushButton:pressed {	\n"
-"	background-color: rgb(35, 40, 49);\n"
-"	border: 2px solid rgb(43, 50, 61);\n"
+"	background-color: rgb(133, 201, 84);\n"
+"	border: 2px solid rgb(133, 201, 84);\n"
 "}")
         icon3 = QIcon()
         icon3.addFile(os.path.dirname(__file__)+"/icons/pack/cil-copy.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_clipboard_directory.setIcon(icon3)
         self.pushButton_clipboard_file = QPushButton(self.frame)
         self.pushButton_clipboard_file.setObjectName(u"pushButton_clipboard_file")
-        self.pushButton_clipboard_file.setGeometry(QRect(320, 155, 41, 30))
+        self.pushButton_clipboard_file.setGeometry(QRect(322, 155, 41, 30))
         self.pushButton_clipboard_file.setMinimumSize(QSize(20, 20))
-        self.pushButton_clipboard_file.setFont(font3)
+        self.pushButton_clipboard_file.setFont(font6)
         self.pushButton_clipboard_file.setStyleSheet(u"QPushButton {\n"
-"	border: 2px solid rgb(52, 59, 72);\n"
+"	border: 2px solid  rgb(133, 201, 84);\n"
 "	border-radius: 5px;	\n"
-"	background-color: rgb(52, 59, 72);\n"
-"	color: rgb(223, 223, 223);\n"
+"	background-color:  rgb(133, 201, 84);\n"
+"	color: rgb(255, 255, 255);\n"
 "}\n"
 "QPushButton:hover {\n"
-"	background-color: rgb(57, 65, 80);\n"
-"	border: 2px solid rgb(61, 70, 86);\n"
+"	background-color: rgb(145, 210, 90);\n"
+"	border: 2px solidrgb(145, 210, 90);\n"
 "}\n"
 "QPushButton:pressed {	\n"
-"	background-color: rgb(35, 40, 49);\n"
-"	border: 2px solid rgb(43, 50, 61);\n"
+"	background-color: rgb(133, 201, 84);\n"
+"	border: 2px solid rgb(133, 201, 84);\n"
 "}")
         self.pushButton_clipboard_file.setIcon(icon3)
         self.pushButton_render_icon = QPushButton(self.frame)
         self.pushButton_render_icon.setObjectName(u"pushButton_render_icon")
         self.pushButton_render_icon.setEnabled(True)
-        self.pushButton_render_icon.setGeometry(QRect(75, 155, 41, 30))
+        self.pushButton_render_icon.setGeometry(QRect(73, 155, 113, 30))
         self.pushButton_render_icon.setMinimumSize(QSize(20, 20))
-        font5 = QFont()
-        font5.setFamily(u"Segoe UI")
-        font5.setPointSize(9)
-        font5.setBold(False)
-        font5.setWeight(50)
-        self.pushButton_render_icon.setFont(font5)
+        font7 = QFont()
+        font7.setFamily(u"Segoe UI Semibold")
+        font7.setPointSize(11)
+        font7.setBold(False)
+        font7.setWeight(50)
+        self.pushButton_render_icon.setFont(font7)
         self.pushButton_render_icon.setStyleSheet(u"QPushButton {\n"
-"	border: 2px solid rgb(239, 192, 48);\n"
+"	border: 2px solid  rgb(77, 190, 217);\n"
 "	border-radius: 5px;	\n"
-"	background-color: rgb(239, 192, 48);\n"
+"	background-color:  rgb(77, 190, 217);\n"
 "	color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(98, 193, 217);\n"
+"	border: 2px solidrgb(98, 193, 217);\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: rgb(77, 190, 217);\n"
+"	border: 2px solid rgb(77, 190, 217);\n"
 "}")
         icon4 = QIcon()
         icon4.addFile(os.path.dirname(__file__)+"/icons/pack/cil-speedometer.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_render_icon.setIcon(icon4)
         self.pushButton_render_icon.setIconSize(QSize(30, 30))
-        self.label_9 = QLabel(self.frame)
-        self.label_9.setObjectName(u"label_9")
-        self.label_9.setGeometry(QRect(70, 155, 51, 30))
-        self.label_9.setFont(font3)
-        self.label_9.setStyleSheet(u"QLabel {\n"
-"	border: 2px solid rgb(239, 192, 48);\n"
+        self.pushButton_CreateRead = QPushButton(self.frame)
+        self.pushButton_CreateRead.setObjectName(u"pushButton_CreateRead")
+        self.pushButton_CreateRead.setGeometry(QRect(196, 155, 113, 30))
+        font8 = QFont()
+        font8.setFamily(u"Segoe UI Semibold")
+        font8.setPointSize(10)
+        font8.setBold(False)
+        font8.setWeight(50)
+        self.pushButton_CreateRead.setFont(font8)
+        self.pushButton_CreateRead.setStyleSheet(u"QPushButton {\n"
+"	border: 2px solid  rgb(77, 190, 217);\n"
 "	border-radius: 5px;	\n"
-"	background-color: rgb(239, 192, 48);\n"
+"	background-color:  rgb(77, 190, 217);\n"
 "	color: rgb(255, 255, 255);\n"
+"}\n"
+"QPushButton:hover {\n"
+"	background-color: rgb(98, 193, 217);\n"
+"	border: 2px solidrgb(98, 193, 217);\n"
+"}\n"
+"QPushButton:pressed {	\n"
+"	background-color: rgb(77, 190, 217);\n"
+"	border: 2px solid rgb(77, 190, 217);\n"
 "}")
-        self.label_9.setAlignment(Qt.AlignCenter)
-        self.label_render_time = QLabel(self.frame)
-        self.label_render_time.setObjectName(u"label_render_time")
-        self.label_render_time.setGeometry(QRect(110, 155, 200, 30))
-        self.label_render_time.setFont(font3)
-        self.label_render_time.setStyleSheet(u"color: rgb(234, 234, 234);\n"
-"background-color: rgb(239, 192, 48);\n"
-"	border-radius: 5px;	")
-        self.label_render_time.setAlignment(Qt.AlignCenter)
-        self.label_version.raise_()
-        self.label_3.raise_()
-        self.pushButton_2.raise_()
-        self.label_project_name.raise_()
-        self.pushButton_3.raise_()
-        self.label__Hossein.raise_()
-        self.pushButton_close.raise_()
-        self.pushButton_clipboard_directory.raise_()
-        self.pushButton_clipboard_file.raise_()
-        self.label_9.raise_()
-        self.pushButton_render_icon.raise_()
-        self.label_render_time.raise_()
+        icon5 = QIcon()
+        icon5.addFile(os.path.dirname(__file__)+"/icons/pack/cil-movie.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_CreateRead.setIcon(icon5)
         self.label_icon_success = QLabel(self.centralwidget)
         self.label_icon_success.setObjectName(u"label_icon_success")
         self.label_icon_success.setGeometry(QRect(170, 10, 80, 80))
@@ -256,12 +268,12 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Notification Panel", None))
-        self.label_version.setText(QCoreApplication.translate("MainWindow", u"<strong>Km Rendering Finished v1.0</strong>", None))
+        self.label_version.setText(QCoreApplication.translate("MainWindow", u"Km Rendering Finished v2.0", None))
         self.label_3.setText(QCoreApplication.translate("MainWindow", u"<strong>Rendering Finished !</strong>", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"Open Render Directory", None))
-        self.label_project_name.setText(QCoreApplication.translate("MainWindow", u"<strong>FS_132-080_comp_v007.nk</strong>", None))
+        self.label_project_name.setText(QCoreApplication.translate("MainWindow", u"FS_132-080_comp_v007.nk", None))
         self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"Open Render File", None))
-        self.label__Hossein.setText(QCoreApplication.translate("MainWindow", u"<strong>By Hossein Karamian</strong>", None))
+        self.label__Hossein.setText(QCoreApplication.translate("MainWindow", u"By Hossein Karamian", None))
 #if QT_CONFIG(tooltip)
         self.pushButton_close.setToolTip(QCoreApplication.translate("MainWindow", u"Close", None))
 #endif // QT_CONFIG(tooltip)
@@ -274,9 +286,14 @@ class Ui_MainWindow(object):
         self.pushButton_clipboard_file.setToolTip(QCoreApplication.translate("MainWindow", u"Copy Render File Address to ClipBoard", None))
 #endif // QT_CONFIG(tooltip)
         self.pushButton_clipboard_file.setText("")
-        self.pushButton_render_icon.setText("")
-        self.label_9.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><br/></p></body></html>", None))
-        self.label_render_time.setText(QCoreApplication.translate("MainWindow", u"<strong>Render Time (H:M:S) :  00:14:07</strong>", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton_render_icon.setToolTip(QCoreApplication.translate("MainWindow", u"Render Time (H:M:S)", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton_render_icon.setText(QCoreApplication.translate("MainWindow", u"00:05:23", None))
+#if QT_CONFIG(tooltip)
+        self.pushButton_CreateRead.setToolTip(QCoreApplication.translate("MainWindow", u"Create Read Node From Rendered File", None))
+#endif // QT_CONFIG(tooltip)
+        self.pushButton_CreateRead.setText(QCoreApplication.translate("MainWindow", u"Create Read", None))
 #if QT_CONFIG(tooltip)
         self.label_icon_success.setToolTip("")
 #endif // QT_CONFIG(tooltip)

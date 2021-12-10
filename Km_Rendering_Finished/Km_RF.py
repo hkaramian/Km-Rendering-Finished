@@ -3,7 +3,7 @@
 #
 # Developed By Hossein Karamian
 # 
-# www.kmworks.ir
+# www.hkaramian.com
 #
 #    _  __  __  __ 
 #   | |/ / |  \/  |
@@ -17,7 +17,7 @@ Changes Log :
 v1.0 | First version | November 24 , 2021 
 v1.0.1 | Bug Fix , in some cases notification window disappears just after it's popping up | November 25 , 2021 
 v1.0.2 | Bug Fix | November 27 , 2021 
-v2.0 | Linux compatible , Bug Fix , Add Create Read Node Button | December 10 , 2021
+v2.0 | Linux compatible , Bug Fix , Add Create Read Node Button, Open Render File button now also working for sequence renders | December 10 , 2021
 """
 
 

@@ -131,7 +131,7 @@ class Km_Notification_Panel(QMainWindow):
         self.Copy_To_ClipBoard(txt)
 
     def Copy_To_ClipBoard_File(self):
-        txt = self.Write_node.knob('file').value()
+        txt = self.Write_node.knob('file').getEvaluatedValue()
         self.Copy_To_ClipBoard(txt)
 
     def Open_Render_File(self):

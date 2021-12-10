@@ -27,7 +27,7 @@ Nuke Version: 13, 12, 11
     + Bug Fix
 + v1.0.2
     + Bug Fix
-+ v2.0 | December 10 , 2021
++ v2.0
     + Bug Fix
     + Linux compatible
     + Add Create Read Node Button

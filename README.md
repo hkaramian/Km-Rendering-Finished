@@ -6,7 +6,7 @@ This tool shows a Notification with some tools after a Nuke render finished
 
 ### Preview
 
-Gif Preview
+![Km_Rendering_Finished_v2](https://user-images.githubusercontent.com/93508495/145724037-537ef51d-d4fc-4990-a9e6-eab8bb113b2f.gif)
 
 ### Install
 1. Copy 'Km_Rendering_Finished' folder to nuke plugin path

@@ -17,6 +17,9 @@ OS : Window, Linux
 
 Nuke Version: 13, 12, 11
 
+### Notes
+About the "Open Render File" button : to work correctly for sequence renders, you should have installed a player for sequence files such as "pd player" and set it as the default program for that type of files.
+
 ### Changes Log
 + v1.0
     + First version

@@ -46,7 +46,16 @@ from PySide2.QtWidgets import *
 
 from ui_notif_panel import Ui_MainWindow
 
+'''
+I just want to note that all the nodes here are based on my own preferences and styles.  Please feel free to ignore all the notes or impliment as you see fit
+Some of the notes may be nit picky but it is the same level of notes I would give to anyone
+
+Cheers Josh
+'''
+
 class Km_Notification_Panel(QMainWindow):
+    # NOTE: I would change the WR here to be writeNode or write_node depending on your preference.  Always name thigs as descriptivly as possbile for official code.
+    # NOTE: This is of course my preference and does not
     def __init__(self,WR):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
@@ -60,6 +69,7 @@ class Km_Notification_Panel(QMainWindow):
         self.setAttribute(Qt.WA_TranslucentBackground)
 
         # opacity
+        # NOTE: try to stay consistent with styling/spacing  ie: a = b instead of a=b as that is how it is throughout all of the code
         self.op_effect=QGraphicsOpacityEffect(self)
         self.opacity_value = 0.92
         self.op_effect.setOpacity(self.opacity_value)
@@ -105,7 +115,7 @@ class Km_Notification_Panel(QMainWindow):
 
 
 
-        
+    # NOTE: Methods/Functions should be lowercase with Classes being the exception for uppercase. ie: removeDefaultTextShadow
     def RemoveDefaultTextShadow(self):
         """Get Rid of nuke pyside default style that apply shadow for texts"""   
         #self.setStyle(QStyleFactory.create('Windows'))
@@ -121,7 +131,8 @@ class Km_Notification_Panel(QMainWindow):
     # def leaveEvent(self, event):  
     #     self.op_effect.setOpacity(self.opacity_value)
 
-
+    # NOTE: Try to maintain a singular style throughout the code either camelCase or standard_naming with the exception being imported modules
+    # NOTE: I would also reccomend adding detailed docstrings to every method
     def Open_Render_Directory(self):
             path =  os.path.dirname(self.Write_node.knob('file').value())
             self.OpenFileOrFolder(path)
@@ -139,17 +150,20 @@ class Km_Notification_Panel(QMainWindow):
         self.OpenFileOrFolder(filePath)
 
     def OpenFileOrFolder(self,path):
+        # NOTE: I would change the logic structure here to be as below
+        if not os.path.exists(path):
+            return
         operatingSystem = platform.system()
-        if os.path.exists(path):
-            if operatingSystem == "Windows":
-                os.startfile(path)
-            elif operatingSystem == "Darwin":
-                subprocess.Popen(["open", path])
-            else:
-                subprocess.Popen(["xdg-open", path])
+        if operatingSystem == "Windows":
+            os.startfile(path)
+        elif operatingSystem == "Darwin":
+            subprocess.Popen(["open", path])
+        else:
+            subprocess.Popen(["xdg-open", path])
 
     def Copy_To_ClipBoard(self,txt) :
         # copy text to clipboard using pyside library , works for both windows & linux
+        # NOTE: Similar to above, try to keep attribute/varialbe names as descriptive as possible.  Though cb/txt are straight forward enough not everyone will understand when looking at the code
         cb = QApplication.clipboard()
         cb.clear(mode=cb.Clipboard )
         cb.setText(txt, mode=cb.Clipboard)
@@ -164,6 +178,7 @@ class Km_Notification_Panel(QMainWindow):
 
         readNode = nuke.createNode("Read")
         if isSequence : # using v!ctor tools code(by Victor Perez ) for creating read node for sequence . https://www.nukepedia.com/gizmos/image/vctor-tools
+            # NOTE: There isn't any reasoing here for redefining self.Write_node to be i.  I would advise to reference self.Write_node directly
             i = self.Write_node
             fileName = i.knob('file').value()
             readNode.knob('file').setValue(fileName)
@@ -194,7 +209,8 @@ class Km_Notification_Panel(QMainWindow):
         notif_panel.activateWindow() # just to be sure it's on top 
         notif_panel.raise_() # just to be sure it's on top 
 
-        
+    # NOTE: This is something that would likely be best set on the write node instead of on the root
+    # NOTE: That way each start render time will be specific to each write node instead of getting reset per write
     @staticmethod
     def Set_Render_Start_Time():
         if not nuke.root().knob("Km_Render_Start_Time"):
@@ -205,33 +221,20 @@ class Km_Notification_Panel(QMainWindow):
         nuke.root().knob("Km_Render_Start_Time").setValue(Current_time_str)
         
     def Get_Time_Duration(self):
+        # NOTE: I would reccomend that you check for the existance of the knob before gettin the value
+        # NOTE: If this is called before that exists then this will cause an error
         time1_str = nuke.root().knob("Km_Render_Start_Time").getValue()
         time1 = datetime.datetime.strptime(time1_str, '%Y-%m-%d %H:%M:%S') # time1_str sample : '2021-11-20 12:33:00'
-        time2 = datetime.datetime.now()
-        duration  = time2 - time1
-        duration_in_s = duration.total_seconds()
-        days    = divmod(duration_in_s, 86400)        # Get days (without [0]!)
-        hours   = divmod(days[1], 3600)               # Use remainder of days to calc hours
-        minutes = divmod(hours[1], 60)                # Use remainder of hours to calc minutes
-        seconds = divmod(minutes[1], 1)               # Use remainder of minutes to calc seconds
-        #print("Time between dates: %d days, %d hours, %d minutes and %d seconds" % (days[0], hours[0], minutes[0], seconds[0])) # Sample Result: Time between dates: 1 days, 8 hours, 34 minutes and 7 seconds
-        h,m,s = "","",""
-        if (hours[0] < 10) : 
-            h = "0"+str(int(hours[0]))
-        else:
-            h = str(int(hours[0]))
-        if (minutes[0] < 10) : 
-            m = "0"+str(int(minutes[0])) 
-        else:
-            m = str(int(minutes[0])) 
-        if (seconds[0] < 10) : 
-            s = "0"+str(int(seconds[0])) 
-        else:
-            s = str(int(seconds[0])) 
 
-        render_time = h+":"+m+":"+s
-       
-        #self.ui.label_render_time.setToolTip("Started at : "+time1_str+", Finished at :"+str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+        # NOTE: As a whole this can be simplified
+        duration  = datetime.datetime.now() - time1
+        duration_in_s = duration.total_seconds()
+
+        timeFormats = dict()
+        timeFormats['hours'] = divmod(days[1], 3600)               # Use remainder of days to calc hours
+        timeFormats['minutes'] = divmod(hours[1], 60)                # Use remainder of hours to calc minutes
+        timeFormats['seconds'] = divmod(minutes[1], 1)               # Use remainder of minutes to calc seconds
+        render_time = 'h{hours}:m{minutes}:s{seconds}'.format(**timeFormats)
 
         return render_time
 
